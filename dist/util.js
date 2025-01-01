@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generate = void 0;
+exports.generate = generate;
 function generate() {
     const subset = "123456789qwertyuiopasdfghjklzxcvbnm";
     const length = 5;
@@ -10,4 +10,3 @@ function generate() {
     }
     return id;
 }
-exports.generate = generate;

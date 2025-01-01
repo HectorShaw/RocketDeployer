@@ -14,18 +14,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
-const util_1 = require("./util");
 const simple_git_1 = __importDefault(require("simple-git"));
+const util_1 = require("./util");
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.post("/deploy", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const repoUrl = req.body.repoUrl;
-    console.log(repoUrl);
     const id = (0, util_1.generate)();
     yield (0, simple_git_1.default)().clone(repoUrl, `output/${id}`);
-    res.json({ id: id });
-    console.log("it worked!" + id);
+    console.log(`Cloned ${repoUrl} to output/${id}`);
+    res.json({
+        id: id
+    });
 }));
-const port = 3000;
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(3000);
