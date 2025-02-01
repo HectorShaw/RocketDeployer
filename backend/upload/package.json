@@ -1,0 +1,29 @@
+{
+  "name": "rocketdeploy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "aws-sdk": "^2.1692.0",
+    "axios": "^1.6.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "redis": "^4.7.0",
+    "simple-git": "^3.27.0",
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.6",
+    "@types/validator": "^13.12.2"
+  }
+}
